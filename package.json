@@ -1,0 +1,19 @@
+{
+  "name": "@letranconghung/bkavcore",
+  "version": "1.0.0",
+  "description": "BKAV Core Services",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/letranconghung/bkavcore.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/letranconghung/bkavcore/issues"
+  },
+  "homepage": "https://github.com/letranconghung/bkavcore#readme"
+}
