@@ -1,6 +1,6 @@
 {
   "name": "@letranconghung/bkavcore",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "BKAV Core Services",
   "main": "index.js",
   "scripts": {
