@@ -1,6 +1,6 @@
 import moment from 'moment'
 
-export function momentDateToString(date = moment(), format = 'YYYY-MM-DD') {
+export const momentDateToString = (date = moment(), format = 'YYYY-MM-DD') => {
   if (!date) return null
   return moment(moment(date), format).format(format)
 }
@@ -22,7 +22,7 @@ const getWeekDay = (dt = moment()) => {
   return getDay === 0 ? 'Chủ nhật' : `Thứ ${getDay + 1}`
 }
 
-export function dateTime(endTime = moment(), startTime = moment(), isPast = false, isAbs = false) {
+export const dateTime = (endTime = moment(), startTime = moment(), isPast = false, isAbs = false) => {
   let timeLeft = moment(endTime || moment()).diff(moment(startTime || moment()))
 
   if (timeLeft < 0 && isPast === false) {
@@ -51,7 +51,7 @@ export function dateTime(endTime = moment(), startTime = moment(), isPast = fals
   return { timeLeft, years, months, weeks, days, hours, minutes, seconds }
 }
 
-function getDayMonth(dt1, dt2) {
+const getDayMonth = (dt1, dt2) => {
   const date1 = parseDT(dt1, 'YYYYMMDDHHmmss')
   const date2 = parseDT(dt2, 'YYYYMMDDHHmmss')
   let t1, t2, days
@@ -83,7 +83,7 @@ function getDayMonth(dt1, dt2) {
   return { months, days }
 }
 
-export function asDateTime(endTime = moment(), startTime = moment(), isPast = false, isAbs = false) {
+export const asDateTime = (endTime = moment(), startTime = moment(), isPast = false, isAbs = false) => {
   let timeLeft = moment(endTime).diff(moment(startTime))
 
   if (timeLeft < 0 && isPast === false) {
